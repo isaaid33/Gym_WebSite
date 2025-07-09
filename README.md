@@ -16,6 +16,7 @@ Secciones de servicios de entrenamiento funcional con imágenes y descripciones.
 Un footer con enlaces de navegación adicionales.
 
 💻 Tecnologías utilizadas
+
 HTML5
 
 CSS3
@@ -24,3 +25,4 @@ Flexbox
 
 ✨ Objetivo
 El objetivo de este proyecto es practicar maquetación y diseño responsive para sitios de presentación comercial, aplicable a gimnasios y centros de entrenamiento funcional.
+@Author: iSAAC SERRANO 
