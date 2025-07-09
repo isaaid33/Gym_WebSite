@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0f0f0f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-image: url(imagenes/bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+    background-color: #040404;
+    border-bottom: 1px solid #FFFFFF29;
+}
+
+.logo {
+    color: #a70a15;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #e11600;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    display: none;
+    cursor: pointer;
+}
+
+.header-info h1 {
+    color: #ce2727;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header-info p {
+    color: #ffffff;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+}
+
+/* Botones */
+.btn-1, .btn-2 {
+    display: inline-block;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.btn-1 {
+    padding: 10px 35px;
+    background-color: #e91e1e;
+    font-size: 20px;
+}
+
+.btn-1:hover {
+    background-color: #a70a15;
+}
+
+.btn-2 {
+    padding: 8px 45px;
+    background-color: #e11680;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.btn-2:hover {
+    background-color: #a70a15;
+}
+
+/* Gym Sections */
+.gym {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    gap: 40px; /* espacio entre texto e imágenes */
+}
+
+.gym-1 {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.gym-1 h2 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.gym-1 p {
+    color: #818181;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.gym-1 span {
+    color: #e91e1e;
+}
+
+/* Contenedor de imágenes: FLEX ROW para alinearlas horizontalmente */
+.gym-2 {
+    display: flex;
+    flex-direction: row; /* alineación horizontal */
+    gap: 20px; /* espacio entre imágenes */
+}
+
+.gym-2 img {
+    width: 100%; /* ancho relativo */
+    max-width: 250px; /* tamaño máximo */
+    height: auto; /* mantiene proporción */
+    object-fit: cover; /* asegura que se vean bien sin deformarse */
+}
+
+/* Footer */
+.footer {
+ border-top: 1px solid #FFFFFF29;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+background-color: #040404;
+    
+
+}
+.footer h3 {
+    color: #a70a15;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.links {
+    display: flex;
+    
+}
+.links ul {
+    margin-right: 35px;
+}
+
+.links ul li {
+    color: #818181;
+}
+
+
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+
+    }
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute; /* Cambia a posición absoluta */
+        top: 100%; /* Coloca debajo del menú */
+        left: 0;    
+
+        background-color: #303030;
+        display: none; /* Oculta el menú por defecto */
+    }
+
+    .menu .navbar ul li {
+        width: 100%; /* Asegura que los enlaces ocupen todo el ancho */
+       
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial; /* Muestra el menú al hacer clic */
+    }
+
+    .header-content {
+        padding: 30px;
+    }
+
+    .header-info h1 {
+        font-size: 50px; /* Reduce el tamaño del título */
+        margin-bottom: 5px;/* Reduce el margen inferior */
+        
+    }
+    .gym {
+        flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto */
+        padding: 30px; /* Reduce el padding */
+    }
+
+    .gym-1 {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 0; /* Elimina el padding derecho */
+        order: 1; /* Asegura que el texto esté primero */
+
+    }
+    .gym-1 h2 {
+        margin-bottom: 15px; /* Reduce el margen inferior */
+
+    }
+    .btn-2 {
+        margin-bottom: 35px; /* Añade margen inferior para separación */
+    }
+    .gym-2 {
+        order: 2; /* Asegura que las imágenes estén después del texto */
+        width: 100%; /* Ocupa todo el ancho */
+        flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .img-1, .img-2 {
+        margin: 0 0 20px 0 ; /* Añade margen inferior para separación */
+    }
+
+    .footer {
+        flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto */
+    }
+    .footer h3 {
+        margin-bottom: 20px; /* Añade margen inferior para separación */
+    }
+
+    .links ul li {
+        margin: 0 10px;
+    }
+}
